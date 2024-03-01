@@ -51,4 +51,5 @@ html_theme_options = {
     },
    "navbar_persistent": [],
    "show_prev_next": False,
+   "show_toc_level": 3
 }
