@@ -38,7 +38,8 @@ Dixon, Hadley and Clements, Robert. (2024).
 Voice Assistants and Biometric Data: Amazon’s Violation of Children’s
 Privacy Rights.
 
-### DOI:
+### DOI:  
+[![DOI](https://zenodo.org/badge/765523646.svg)](https://zenodo.org/doi/10.5281/zenodo.10740536)
 
 ### Objective:
 
