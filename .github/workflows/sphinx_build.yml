@@ -39,7 +39,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Sphinx build
         run: |
-          sphinx-build source _build
+          sphinx-build source _build --fresh-env
   deploy:
     environment:
       name: github-pages
