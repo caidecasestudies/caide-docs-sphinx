@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Voice Assistants and Biometric Data &#8212; CAIDE Case Studies 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'case-studies/voice-assistants-and-biometric-data';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Facial Recognition for Policing" href="facial-recognition-for-policing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CAIDE Case Studies</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course-materials/_index.html">
+                        Course Materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="_index.html">
+                        Case Studies
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/caidecasestudies" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course-materials/_index.html">
+                        Course Materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="_index.html">
+                        Case Studies
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/caidecasestudies" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="facial-recognition-for-policing.html">Facial Recognition for Policing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Voice Assistants and Biometric Data</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="_index.html" class="nav-link">Case Studies</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Voice...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="voice-assistants-and-biometric-data">
+<h1>Voice Assistants and Biometric Data<a class="headerlink" href="#voice-assistants-and-biometric-data" title="Link to this heading">#</a></h1>
+<section id="amazons-violations-of-children-s-privacy-rights">
+<h2>Amazon’s Violations of Children’s Privacy Rights<a class="headerlink" href="#amazons-violations-of-children-s-privacy-rights" title="Link to this heading">#</a></h2>
+<section id="themes">
+<h3>Themes:<a class="headerlink" href="#themes" title="Link to this heading">#</a></h3>
+<p>Data Security &amp; Privacy</p>
+</section>
+<section id="prerequisites">
+<h3>Prerequisites:<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>None for the Case Study section</p></li>
+</ul>
+</section>
+<section id="owner">
+<h3>Owner:<a class="headerlink" href="#owner" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.usfca.edu/data-institute/centers-initiatives/caide"><u>Center for AI and Data
+Ethics</u></a>
+at University of San Francisco</p>
+</section>
+<section id="author-s">
+<h3>Author(s):<a class="headerlink" href="#author-s" title="Link to this heading">#</a></h3>
+<p>Hadley Dixon and Robert Clements</p>
+</section>
+<section id="links">
+<h3>Links:<a class="headerlink" href="#links" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Github repository:
+<a class="reference external" href="https://github.com/caidecasestudies/case-study-voice-assistants"><u>https://github.com/caidecasestudies/case-study-voice-assistants</u></a></p></li>
+<li><p>PDF</p></li>
+</ul>
+</section>
+<section id="license">
+<h3>License:<a class="headerlink" href="#license" title="Link to this heading">#</a></h3>
+<p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<br />
+<a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><u>CC BY-NC-SA</u></a></p>
+</section>
+<section id="citation">
+<h3>Citation:<a class="headerlink" href="#citation" title="Link to this heading">#</a></h3>
+<p>Dixon, Hadley and Clements, Robert. (2024).
+<a class="reference external" href="https://github.com/caidecasestudies/case-study-voice-assistants"><u>https://github.com/caidecasestudies/case-study-voice-assistants</u></a>.
+Voice Assistants and Biometric Data: Amazon’s Violation of Children’s
+Privacy Rights.</p>
+</section>
+<section id="doi">
+<h3>DOI:<a class="headerlink" href="#doi" title="Link to this heading">#</a></h3>
+</section>
+<section id="objective">
+<h3>Objective:<a class="headerlink" href="#objective" title="Link to this heading">#</a></h3>
+<p>The purpose of this case study is to introduce issues around data
+privacy and data security by learning the details about a specific
+lawsuit brought against a popular tech company, and use the details and
+results of that lawsuit to discuss the potential harms done by this
+company and other similar companies and gaps in our current laws and
+regulations around privacy.</p>
+</section>
+<section id="instructions">
+<h3>Instructions:<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Read through the case study individually and then answer the
+discussion questions as a group, or in small groups.</p></li>
+</ol>
+</section>
+<section id="case-study">
+<h3>Case Study:<a class="headerlink" href="#case-study" title="Link to this heading">#</a></h3>
+<p>In November 2014, Amazon released the first version of its
+voice-activated digital assistant, Alexa, along with the Amazon Echo
+device. Alexa’s capabilities have since expanded and has become a
+prominent player in the digital assistant market alongside Apple’s Siri
+and Google’s Home Assistant. These technologies offer a seamless and
+hands-free way to interact with various devices and bring convenience to
+daily tasks such as setting reminders, playing music, and browsing the
+web. The natural language processing capabilities of these voice
+assistants make them user-friendly and accessible to a broad audience,
+making this technology essential to the smart-home ecosystem.</p>
+<p>The rapid development of voice assistant technology in recent years
+raises significant privacy concerns due to the inherent need to
+transmit, store and process voice data for the proper functioning of
+these devices. Voice data holds crucial information, including the tone,
+word choice, and frequency of speech. Once stored, voice detection
+models trained on this data can detect especially intimate details, such
+as a user’s height, weight, ethnicity, personality traits, emotional
+state, and demeanor (<a class="reference external" href="https://abcnews.go.com/Technology/collection-voice-data-profit-raises-privacy-fears/story?id=96363792"><u>Winters,
+2022</u></a>).
+The efficacy of voice assistant technology relies on the ability to
+store biometric data. The subsequent privacy considerations should
+address if this data should be stored, for how long, who is able to view
+stored data and for what purpose. In the absence of limiting its
+collection, protection of this data becomes crucial, especially
+regarding safeguards for children.</p>
+<p>On May 31st, 2023, the Department of Justice (DOJ) and the Federal Trade
+Commission (FTC) filed a legal complaint, <a class="reference external" href="https://www.ftc.gov/system/files/ftc_gov/pdf/Amazon-Complaint-%28Dkt.1%29.pdf"><u>USA v. Amazon.com, Inc
+(2023)</u></a>,
+against Amazon for allegedly violating the Children’s Online Privacy
+Protection Act (COPPA) Rule and for deceptive practices regarding data
+deletion. The significance of this case extends beyond Amazon itself,
+serving as a critical examination of AI privacy rights and the
+responsibility of companies in safeguarding user data, particularly
+biometric data (<a class="reference external" href="https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever"><u>FTC,
+2023a</u></a>).</p>
+<p>Congress enacted the <a class="reference external" href="https://www.ftc.gov/system/files/2012-31341.pdf"><u>Children’s Online Privacy Protection Act
+(COPPA)</u> <u>of
+1998</u></a> to protect
+the safety and privacy of children online by prohibiting the
+unauthorized or unnecessary collection of children’s personal
+information by operators of online services. Provisions of COPPA require
+that an operator of a commercial website or online service directed to
+children under 13-years-old notify parents about the information they
+collect from children, obtain parents’ consent for the collection of
+that data, and allow them to delete that information at any time.
+Additionally, the COPPA Rule prohibits the retention of information
+collected from children under 13 for longer than “reasonably necessary”
+to provide the service. In this context, personal information explicitly
+refers to a child’s first and last name, an audio file of a child’s
+voice, and parental information collected from a child’s online account.</p>
+<p>According to the complaint Amazon’s virtual assistants include voice
+activated services aimed at children under 13-years-old, specifically
+“FreeTime Unlimited on Alexa” and the Echo Dot Kids smart speaker, which
+offer children’s audiobooks, and audio-based Alexa applications such as
+voice controlled games, stories, jokes, and educational tools (<a class="reference external" href="https://www.ftc.gov/business-guidance/blog/2023/05/out-mouths-babes-ftc-says-amazon-kept-kids-alexa-voice-data-forever-even-after-parents-ordered"><u>FTC,
+2023c</u></a>).
+More than 800,000 children under 13-years-old have their own Alexa
+profiles, which include the child’s name, birthdate, gender, and a link
+to the parent’s profile. The allegations state that Amazon violated data
+retention policies for children as outlined in COPPA and deceived
+parents and Alexa users about deletion practices. This follows several
+instances of parents’ requests to delete their children’s voice data,
+with Amazon responding by deleting files in some databases while
+maintaining them in some form elsewhere – meaning the information was
+available for Amazon to use for its own purposes. Also, important to
+note is that the original data when initially stored was made available
+to thousands of employees that had no need for accessing the data and
+did not work on any Alexa-based teams. The complaint alleges that Amazon
+prevents parents from exercising their deletion rights under the COPPA
+rule and kept voice and geolocation data for years, violating the
+duration of which it is “reasonably necessary” to provide the service.
+By retaining this data indefinitely and using it to train their
+algorithms, the plaintiffs claim Amazon has violated COPPA and put
+children’s data at risk of harm from unnecessary access.</p>
+<p>In response, Amazon claimed it retained children’s voice recordings in
+order to better respond to commands, allow parents to review them, and
+to improve Alexa’s speech recognition and processing capabilities. The
+company claims the utility in retaining children’s voice data lies in
+the differing speech patterns between children and adults, which
+ultimately provide the company with valuable data when training their
+voice detection models.</p>
+<p>Following the complaint, the proposed court order imposes provisions on
+Amazon, as well as levying a $25 million civil penalty. These provisions
+prohibit Amazon from using geolocation, voice information, and
+children’s voice information when subject to consumers’ deletion
+requests and from misrepresenting its privacy policies related to the
+biometrics of children. Additionally, Amazon is required to delete
+inactive Alexa accounts of children and implement a privacy program
+related to the company’s use of geolocation information, which was not
+formerly in existence. All users must be notified about the complaint
+filed by the FTC-DOJ, as well as Amazon’s updated data retention and
+deletion practices.</p>
+</section>
+<section id="discussion-questions">
+<h3>Discussion Questions:<a class="headerlink" href="#discussion-questions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>What goals and purposes were involved in the actions taken by the
+FTC-DOJ?</p></li>
+<li><p>Were the circumstances of Amazon’s violations created intentionally,
+unintentionally, or as a side effect of corporate incentives?</p></li>
+<li><p>How do Amazon’s actions put children at risk of harm? In what ways
+can biometric data be exploited in the hands of an unsanctioned
+third party?</p></li>
+<li><p>Should there be an equivalent to the COPPA rule for adults or
+certain sub-populations of adults?</p></li>
+</ol>
+<p>This case is one of many against Amazon (<u>FTCb, 2023</u>). Users are
+questioning, to what extent will companies sacrifice privacy for
+profits? It is important to ensure to users that artificial intelligence
+(AI) systems are designed with privacy in mind and that individuals
+maintain ownership over their data.</p>
+<p>To address these privacy concerns, it is crucial for companies to
+implement robust data protection measures. This includes strict
+adherence to existing regulations, such as COPPA. California, Texas,
+Washington, and Illinois already have enacted laws pertaining to the
+collection of voice data. One policy in Illinois requires companies to
+obtain written consent from individuals before collecting such data, and
+afterward are prohibited from selling or profiting off of the
+information, facing financial penalties if violated. Furthermore, there
+is a need for enhanced oversight and accountability mechanisms.
+Settlements like the one proposed by the FTC send clear warnings to
+companies developing AI about the consequences of neglecting user
+privacy rights. Similarly, regular audits and assessments by regulatory
+bodies can help ensure compliance, and companies should act proactively
+to address user requests for data deletion. Proactive efforts become
+increasingly important when considering interactions between voice
+assistants and other devices in the home. Vulnerabilities compound when
+voice data is linked with other sensitive information such as the home’s
+floor plan from robot vacuums, or the use frequency of the home security
+system. Implementing privacy-by-design principles in the development of
+AI technologies can also contribute to minimizing the risks associated
+with data collection and retention.</p>
+</section>
+<section id="references">
+<h3>References:<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p>Children’s Online Privacy Protection Act of 1998, 15
+U.S.C. § 6501 (1998).</p>
+<p>Federal Trade Commission (FTC). (2023a, May). FTC and
+DOJ charge Amazon with violating children’s privacy law [Press
+release]. Retrieved from
+<a class="reference external" href="https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever"><u>https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever</u></a></p>
+<p>Federal Trade Commission (FTC). (2023b, May). FTC
+says Ring employees illegally surveilled customers, failed to stop
+hackers from taking control of users’ cameras [Press release].
+Retrieved from
+<a class="reference external" href="https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users"><u>https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users</u></a></p>
+<p>Federal Trade Commission (FTC). (2023c, May). Out of the mouths of
+babes? FTC says Amazon kept kids’ Alexa voice data forever – even after
+parents ordered deletion [Blog post]. Retrieved from
+<a class="reference external" href="https://www.ftc.gov/business-guidance/blog/2023/05/out-mouths-babes-ftc-says-amazon-kept-kids-alexa-voice-data-forever-even-after-parents-ordered"><u>https://www.ftc.gov/business-guidance/blog/2023/05/out-mouths-babes-ftc-says-amazon-kept-kids-alexa-voice-data-forever-even-after-parents-ordered</u></a></p>
+<p>United States of America v. Amazon.com, Inc, Case No. 2:23-cv-00811
+(United States District Court Western District of Washington 2023).
+Complaint for Permanent Injunction, Civil Penalties, and Other Relief.
+Retrieved from
+<a class="reference external" href="https://www.ftc.gov/system/files/ftc_gov/pdf/Amazon-Complaint-%28Dkt.1%29.pdf"><u>https://www.ftc.gov/system/files/ftc_gov/pdf/Amazon-Complaint-%28Dkt.1%29.pdf</u></a></p>
+<p>Winters, M. (2022, January 20). Collection of voice data for profit
+raises privacy fears. ABC News. Retrieved from
+<a class="reference external" href="https://abcnews.go.com/Technology/collection-voice-data-profit-raises-privacy-fears/story?id=96363792"><u>https://abcnews.go.com/Technology/collection-voice-data-profit-raises-privacy-fears/story?id=96363792</u></a></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amazons-violations-of-children-s-privacy-rights">Amazon’s Violations of Children’s Privacy Rights</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#themes">Themes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#owner">Owner:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#author-s">Author(s):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links">Links:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doi">DOI:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study">Case Study:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion-questions">Discussion Questions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Robert Clements.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
